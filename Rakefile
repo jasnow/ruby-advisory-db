@@ -15,7 +15,7 @@ namespace :lint do
     Dir.glob('{gems,libraries,rubies}/*/*.yml') do |path|
       advisory = YAML.load_file(path)
 
-      unless advisory['cve']
+      unless advisory['cve'] || advisory['osvdb']
         puts "Missing CVE: #{path}"
       end
     end
