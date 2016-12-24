@@ -60,7 +60,7 @@ shared_examples_for 'Advisory' do |path|
       subject { advisory['osvdb'] }
 
       it "may be nil or a Fixnum" do
-        expect(subject).to be_kind_of(Fixnum).or(be_nil)
+        expect(subject).to be_kind_of(0.class).or(be_nil)
       end
 
        it "should be id in filename if filename is OSVDB-XXX" do
