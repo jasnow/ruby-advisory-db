@@ -28,5 +28,5 @@ task :sync_github_advisories do
   GitHub::GitHubAdvisorySync.sync
 end
 
-task :lint    => ['lint:yaml', 'lint:cve']
+task :lint    => ['lint:yaml']
 task :default => :lint
