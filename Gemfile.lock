@@ -10,13 +10,15 @@ GEM
     faraday-net_http (1.0.0)
     kwalify (0.7.2)
     method_source (1.0.0)
-    mini_portile2 (2.4.0)
     multipart-post (2.1.1)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.11.0.rc4-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.11.0.rc4-x86_64-linux)
+      racc (~> 1.4)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    racc (1.5.2)
     rake (13.0.3)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
@@ -40,7 +42,7 @@ PLATFORMS
 DEPENDENCIES
   faraday
   kwalify
-  nokogiri
+  nokogiri (= 1.11.0.rc4)
   pry
   rake
   rspec
