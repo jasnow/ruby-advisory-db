@@ -7,5 +7,5 @@ gem 'rspec'
 
 group :development do
   gem 'pry'
-  gem 'nokogiri', '1.11.0.rc4' # 1/2/2021: LOCKED DOWN
+  gem 'nokogiri'
 end
