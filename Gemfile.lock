@@ -33,7 +33,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.1)
-    ruby2_keywords (0.0.3)
+    ruby2_keywords (0.0.4)
 
 PLATFORMS
   x86_64-darwin-16
@@ -48,4 +48,4 @@ DEPENDENCIES
   rspec
 
 BUNDLED WITH
-   2.2.5
+   2.2.6
