@@ -4,7 +4,7 @@ require 'advisory_example'
 shared_examples_for "Rubies Advisory" do |path|
   include_examples 'Advisory', path
 
-  advisory = YAML.load_file(path)
+  advisory = YAML.load_file(path, permitted_classes: [Date])
 
   describe path do
     let(:engine) { File.basename(File.dirname(path)) }
