@@ -1,1 +1,1 @@
-rvm use ruby-3.2.0@ruby3.0-rails7.0 --create
+rvm use 3.2.0@ruby3.0-rails7.0 --create

@@ -1,8 +1,9 @@
+---
 type: map
 mapping:
   "gem":
     type: str
-    required: yes
+    required: true
   "library":
     type: str
   "framework":
@@ -42,11 +43,6 @@ mapping:
     type: seq
     sequence:
       - type: str
-  "vendor_patch":
-    type: seq
-    sequence:
-      - type: str
-        pattern: /https?:\/\//
   "related":
     type: map
     mapping:
@@ -69,3 +65,5 @@ mapping:
         sequence:
           - type: str
             pattern: /https?:\/\//
+  "notes":
+    type: str

@@ -2,7 +2,7 @@ load File.join(File.dirname(__FILE__), 'spec_helper.rb')
 require 'yaml'
 
 shared_examples_for 'Advisory' do |path|
-  advisory = YAML.load_file(path, permitted_classes: [Date])
+  advisory = YAML.safe_load_file(path, permitted_classes: [Date])
 
   describe path do
     let(:filename) { File.basename(path) }
@@ -32,6 +32,14 @@ shared_examples_for 'Advisory' do |path|
 
     it "should have CVE or OSVDB or GHSA" do
       expect(advisory['cve'] || advisory['osvdb'] || advisory['ghsa']).not_to be_nil
+    end
+
+    describe "library" do
+      subject { advisory['library'] }
+
+      it "may be nil or a String" do
+        expect(subject).to be_kind_of(String).or(be_nil)
+      end
     end
 
     describe "framework" do
@@ -223,6 +231,13 @@ shared_examples_for 'Advisory' do |path|
       end
     end
 
+    describe "notes" do
+      subject { advisory['notes'] }
+
+      it "may be nil or a String" do
+        expect(subject).to be_kind_of(String).or(be_nil)
+      end
+    end
 
   end
 end

@@ -6,7 +6,7 @@ You can check your own Gemfile.locks against this database by using [bundler-aud
 
 ## Support Ruby security!
 
-Do you know about a vulnerability that isn't listed in this database? Open an issue, submit a PR, or [use this form](https://rubysec.com/advisories/new) which will email the maintainers.
+Do you know about a vulnerability that isn't listed in this database? Open an issue or submit a PR.
 
 ## Directory Structure
 
@@ -61,6 +61,7 @@ Each advisory file contains the advisory information in [YAML] format:
 ### Schema
 
 * `gem` \[String\] (required): Name of the affected gem.
+* `library` \[String\] (optional): Name of the ruby library which the affected gem belongs to.
 * `framework` \[String\] (optional): Name of the framework which the affected
   gem belongs to.
 * `platform` \[String\] (optional): If this vulnerability is platform-specific, name of platform this vulnerability affects (e.g. jruby)
@@ -78,6 +79,7 @@ Each advisory file contains the advisory information in [YAML] format:
 * `patched_versions` \[Array\<String\>\] (optional): The version requirements for the
   patched versions of the Ruby library.
 * `related` \[Hash\<Array\<String\>\>\] (optional): Sometimes an advisory references many urls and other identifiers. Supported keys: `cve`, `ghsa`, `osvdb`, and `url`
+* `notes` \[String\] (optional): Internal notes regarding the vulnerability's inclusion in this database.
 
 ### Tests
 Prior to submitting a pull request, run the tests:
@@ -98,9 +100,16 @@ The GitHub Advisory API requires a token to access it.
 - It can be a completely scopeless token (recommended); it does not require any permissions at all.
 - Get yours at https://github.com/settings/tokens
 
-To run the GitHub Advisory sync, start by executing the rake task:
+To run the GitHub Advisory sync to retrieve all advisories, start by executing the rake task:
+
 ```
 GH_API_TOKEN=<your GitHub API Token> bundle exec rake sync_github_advisories
+```
+
+Or, to only retrieve advisories for a single gem:
+
+```
+GH_API_TOKEN=<your GitHub API Token> bundle exec rake sync_github_advisories[gem_name]
 ```
 
 - The rake task will write yaml files for any missing advisories.
@@ -125,7 +134,7 @@ developed by the Open Security Foundation (OSF) and its contributors.
 
 [rubygems.org]: https://rubygems.org/
 [CVE]: https://cve.mitre.org/
-[OSVDB]: http://www.osvdb.org/
+[OSVDB]: https://en.wikipedia.org/wiki/Open_Source_Vulnerability_Database
 [GHSA]: https://help.github.com/en/articles/about-maintainer-security-advisories
 [CVSSv2]: https://www.first.org/cvss/v2/guide
 [CVSSv3]: https://www.first.org/cvss/user-guide
