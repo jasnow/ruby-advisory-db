@@ -10,3 +10,8 @@ group :development do
   gem 'nokogiri'
   gem 'activesupport'
 end
+
+group :development, :test do
+  gem "ruby_audit"
+  gem "spektr"
+end
