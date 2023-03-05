@@ -27,7 +27,7 @@ GEM
       concurrent-ruby (~> 1.0)
     kwalify (0.7.2)
     method_source (1.0.0)
-    minitest (5.17.0)
+    minitest (5.18.0)
     nokogiri (1.14.2-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.14.2-x86_64-linux)
@@ -57,7 +57,7 @@ GEM
     ruby2_keywords (0.0.5)
     ruby_audit (2.2.0)
       bundler-audit (~> 0.9.0)
-    ruby_parser (3.19.2)
+    ruby_parser (3.20.0)
       sexp_processor (~> 4.16)
     sexp_processor (4.16.1)
     simplecov (0.22.0)
@@ -69,7 +69,7 @@ GEM
     slim (5.0.0)
       temple (~> 0.10.0)
       tilt (>= 2.0.6, < 2.1)
-    spektr (0.4.0)
+    spektr (0.4.1)
       erubi
       haml
       parser (>= 2.6.0)
