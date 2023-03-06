@@ -14,5 +14,6 @@ end
 group :development, :test do
   gem "ruby_audit"
   gem "spektr"
-  gem 'simplecov'
 end
+
+gem 'simplecov', require: false, group: :test

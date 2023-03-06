@@ -1,7 +1,10 @@
 require 'simplecov'
-SimpleCov.start do
-  enable_coverage :branch
-  primary_coverage :branch
+if ENV["COVERAGE"]
+  SimpleCov.start 'rails' do
+    puts "Adding simplecov"
+    enable_coverage :branch
+    primary_coverage :branch
+  end
 end
 
 require 'date'
