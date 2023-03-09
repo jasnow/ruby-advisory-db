@@ -1,4 +1,3 @@
-load File.join(File.dirname(__FILE__), 'spec_helper.rb')
 require 'yaml'
 
 shared_examples_for 'Advisory' do |path|

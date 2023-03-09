@@ -1,4 +1,3 @@
-load File.join(File.dirname(__FILE__), 'spec_helper.rb')
 require 'advisory_example'
 
 shared_examples_for "Libraries Advisory" do |path|
