@@ -2,7 +2,7 @@ name: Notify RubySec website of change
 
 on:
   push:
-    branches: [ main ]
+    branches: [ snowify ]
 
 jobs:
   notify:
