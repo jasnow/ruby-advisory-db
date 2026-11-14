@@ -29,7 +29,7 @@ description: |
   content do not apply.
 cvss_v3: 3.1
 unaffected_versions:
-  - "<= 7.4.0"
+  - "< 7.4.0"
 patched_versions:
   - ">= 8.4.3"
 related:
