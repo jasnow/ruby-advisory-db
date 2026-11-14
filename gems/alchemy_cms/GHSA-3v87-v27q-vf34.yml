@@ -47,7 +47,7 @@ description: |
   example its to_s.
 cvss_v3: 5.4
 unaffected_versions:
-  - "<= 6.0.0"
+  - "< 6.0.0"
 patched_versions:
   - ">= 8.4.3"
 related:
