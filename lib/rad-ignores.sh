@@ -211,7 +211,6 @@ rm -f gems/kobako/CVE-2026-55107.yml
 # #......................................................................
 # # Redhat
 # GHSA-3fcg-qm7h-hhpw (red hat #3)
-# GHSA-gphm-f2cq-m9pv (red hat #2)
 # GHSA-w5v4-7h7x-xfvq (red hat #1)
 # GHSA-h459-7mrx-8pvc - CVE-2014-0241 (Red hat plugin, not ruby lang)
 # GHSA-f29j-vf7h-f9g9 - CVE-2013-1945 (Red hat/Ruby 1.9.3)
@@ -292,6 +291,16 @@ rm -f gems/nokogiri/CVE-2026-79770.yml
 rm -f gems/nokogiri/CVE-2026-79771.yml
 rm -f gems/nokogiri/CVE-2026-79772.yml
 
+# 9/4/2026: More duplicates and withdrawns
+# nokogiri  | https://github.com/advisories/GHSA-5jhf-fpp7-v2pv (duplicate)
+# nokogiri  | https://github.com/advisories/GHSA-xqqh-3w52-q8p7 (duplicate)
+# nokogiri  | https://github.com/advisories/GHSA-rh9x-7xjc-vwx2 (duplicate)
+# paperclip | https://github.com/advisories/GHSA-phmw-pv3f-vvx7 (withdrawn)
+# sprockets | https://github.com/advisories/GHSA-r4x3-g983-9g48 (withdrawn)
+
+# 9/9/2026: 
+# Rubygmems | https://github.com/advisories/GHSA-mq4m-44x6-6r2v (not a gem)
+
 # 10/20/2026: Use GHSA prefix (GHSA-6wmf-3r64-vcwv.yml) over CVE.
 rm -f gems/crass/CVE-2026-61845.yml
 
@@ -323,3 +332,54 @@ rm -f gems/activestorage/CVE-2026-122006.yml
 
 # 9/9/2026: 
 # Rubygmems | https://github.com/advisories/GHSA-mq4m-44x6-6r2v (not a gem)
+# 11/11/2026: Duplicates of existing advisories based on this analysis:
+# https://gist.github.com/jasnow/42de658436d1fb32011893b6d99c9ca9
+rm -f \
+	gems/actionmailbox/CVE-2026-126068.yml \
+	gems/actionpack/CVE-2026-126067.yml \
+	gems/actionpack/CVE-2026-126073.yml \
+	gems/actionpack/CVE-2026-126076.yml \
+	gems/actionpack/CVE-2026-126083.yml \
+	gems/activestorage/CVE-2026-126071.yml \
+	gems/activestorage/CVE-2026-126074.yml \
+	gems/activestorage/CVE-2026-126085.yml \
+	gems/activestorage/CVE-2026-126186.yml \
+	gems/activesupport/CVE-2026-126075.yml \
+	gems/activesupport/CVE-2026-126080.yml \
+	gems/nokogiri/CVE-2026-126062.yml \
+	gems/nokogiri/CVE-2026-126063.yml \
+	gems/nokogiri/CVE-2026-126064.yml \
+	gems/omniauth/CVE-2026-63183.yml \
+	gems/rack/CVE-2026-125108.yml \
+	gems/rack/CVE-2026-125109.yml \
+	gems/rack/CVE-2026-125110.yml \
+	gems/rack/CVE-2026-125111.yml
+
+# 11/13/2026: Duplicates of existing advisories based on this analysis:
+rm -f \
+       gems/actionpack/CVE-2026-126072.yml \
+       gems/actionpack/CVE-2026-126077.yml \
+       gems/actionpack/CVE-2026-126081.yml \
+\
+       gems/actionview/CVE-2026-126069.yml \
+       gems/actionview/CVE-2026-126070.yml \
+       gems/actionview/CVE-2026-126078.yml \
+       gems/actionview/CVE-2026-126079.yml \
+\
+       gems/activestorage/CVE-2026-122006.yml \
+       gems/activestorage/CVE-2026-126084.yml \
+       gems/activestorage/CVE-2026-126188.yml \
+\
+       gems/addressable/CVE-2026-126348.yml \
+       gems/addressable/CVE-2026-126349.yml \
+       gems/addressable/CVE-2026-126350.yml \
+       gems/addressable/CVE-2026-126351.yml \
+       gems/addressable/CVE-2026-126352.yml \
+       gems/addressable/CVE-2026-126354.yml \
+\
+       gems/loofah/CVE-2026-126203.yml \
+       gems/loofah/CVE-2026-126205.yml \
+       gems/loofah/CVE-2026-126206.yml \
+       gems/loofah/CVE-2026-126207.yml \
+       gems/loofah/CVE-2026-126208.yml \
+       gems/loofah/CVE-2026-126209.yml
