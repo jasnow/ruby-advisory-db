@@ -26,7 +26,7 @@ description: |
   user are affected. Devise-based apps appear to be safe.
 cvss_v3: 6.5
 unaffected_versions:
-  - "<= 8.3.10"
+  - "< 8.4.0"
 patched_versions:
   - ">= 8.4.3"
 related:
